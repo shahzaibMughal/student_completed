@@ -1,0 +1,34 @@
+*{
+  font-family: "Arial" , sans-serif;
+}
+
+/*  Nav bar styles
+************************/
+nav li{
+  list-style: none;
+  color: #FFF;
+  padding: 10px 0;
+}
+
+nav li a{
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+}
+
+nav li a:hover{
+  background: #00aa00;
+}
+nav ul{
+  background: #008800;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+
+nav li:nth-child(1){
+  flex-basis: 25%;
+  font-size: 1.2em;
+}

@@ -1,0 +1,26 @@
+/* Nav bar styles */
+nav{
+  background: #563d7c;
+  color: #fff;
+  padding: 10px;
+  padding-left: 50px;
+}
+.nav-item,.nav-link{
+  color: #fff;
+}
+.nav-link:hover{
+  color: #eee;
+}
+
+
+/* Table styles */
+table{
+  width: 90%;
+  margin: 0 auto;
+}
+td{
+  border: 1px solid black;
+}
+td,th{
+  padding: 10px;
+}
