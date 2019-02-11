@@ -66,7 +66,24 @@ $db = mysqli_connect("localhost","root",'','ss');
         </form>
     </div>
 
-
+    <div class="table-responsive">
+      <table class="table table-striped" >
+        <thead>
+          <tr>
+            <th scope="col">CNIC</th>
+            <th  scope="col" >Name</th>
+            <th  scope="col" >DOB</th>
+            <th  scope="col" >Address</th>
+            <th  scope="col" >City</th>
+            <th  scope="col" >Degree Program</th>
+            <th  scope="col" >Gender</th>
+            <th  scope="col" >Email</th>
+            <th  scope="col" >Mobile</th>
+            <th  scope="col" ></th>
+            <th  scope="col" ></th>
+          </tr>
+        </thead>
+        <tbody>
 
 <?php
 
@@ -92,24 +109,7 @@ if(isset($_GET['search']))
 
 
 
-      <div class="table-responsive">
-        <table class="table table-striped" >
-          <thead>
-            <tr>
-              <th scope="col">CNIC</th>
-              <th  scope="col" >Name</th>
-              <th  scope="col" >DOB</th>
-              <th  scope="col" >Address</th>
-              <th  scope="col" >City</th>
-              <th  scope="col" >Degree Program</th>
-              <th  scope="col" >Gender</th>
-              <th  scope="col" >Email</th>
-              <th  scope="col" >Mobile</th>
-              <th  scope="col" ></th>
-              <th  scope="col" ></th>
-            </tr>
-          </thead>
-          <tbody>
+
 
             <?php  while($student = mysqli_fetch_assoc($resultSet)){?>
               <tr>

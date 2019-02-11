@@ -23,7 +23,7 @@
 
    if(mysqli_query($conn, $que)){
 
-     echo "<center><b>The following data is being inserted into database</b></center>";
+     header("Location: view_students.php");
      exit;
    }
  }
