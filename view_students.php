@@ -27,34 +27,35 @@
       <ul class="nav ">
         <li class="nav-item navbar-brand "> Student Management System</li>
         <li  class="nav-item"> <a class="nav-link active" href="user_registration_new.php">Add Record</a></li>
-        <li class="nav-item"> <a class="nav-link"  href=".php">Update Record</a> </li>
-        <li class="nav-item"> <a class="nav-link"  href="delete.php">Delete Record</a> </li>
-        <li class="nav-item"> <a class="nav-link"  href="view_students.php">Show Record</a> </li>
+        <li class="nav-item"> <a class="nav-link"  href="update_students.php">Update Record</a> </li>
+        <li class="nav-item"> <a class="nav-link"  href="delete_students.php">Delete Record</a> </li>
+        <li class="nav-item"> <a class="nav-link "  href="view_students.php">Show Record</a> </li>
         <li class="nav-item"> <a class="nav-link"  href="search.php">Search Record</a> </li>
       </ul>
     </nav>
+    <div class="table-responsive">
 
-      <table >
+      <table class="table table-striped" >
         <thead>
           <tr>
-            <th>CNIC</th>
-            <th>Name</th>
-            <th>DOB</th>
-            <th>Address</th>
-            <th>City</th>
-            <th>Degree Program</th>
-            <th>Gender</th>
-            <th>Email</th>
-            <th>Mobile</th>
-            <th></th>
-            <th></th>
+            <th scope="col">CNIC</th>
+            <th  scope="col" >Name</th>
+            <th  scope="col" >DOB</th>
+            <th  scope="col" >Address</th>
+            <th  scope="col" >City</th>
+            <th  scope="col" >Degree Program</th>
+            <th  scope="col" >Gender</th>
+            <th  scope="col" >Email</th>
+            <th  scope="col" >Mobile</th>
+            <th  scope="col" ></th>
+            <th  scope="col" ></th>
           </tr>
         </thead>
         <tbody>
 
           <?php  while($student = mysqli_fetch_assoc($resultSet)){?>
             <tr>
-              <td><?php echo $student['cnic']; ?></td>
+              <td scope="row" ><?php echo $student['cnic']; ?></td>
               <td><?php echo $student['fname'] . " ".  $student['lname']; ?></td>
               <td><?php echo $student['dateofbirth']; ?></td>
               <td><?php echo $student['address']; ?></td>
@@ -63,12 +64,13 @@
               <td><?php echo $student['gender']; ?></td>
               <td><?php echo $student['email']; ?></td>
               <td><?php echo $student['mobile']; ?></td>
-              <td> <a href=<?php echo "update_student.php?u_id=".$student['u_id']; ?> >Update</a> </td>
-              <td> <a href=<?php echo "delete_student.php?u_id=".$student['u_id']; ?> >Delete</a> </td>
+              <td> <a class="btn btn-primary" href=<?php echo "update_student.php?u_id=".$student['u_id']; ?> >Update</a> </td>
+              <td> <a class="btn btn-primary" href=<?php echo "delete_student.php?u_id=".$student['u_id']; ?> >Delete</a> </td>
             </tr>
           <?php }?>
         </tbody>
       </table>
+    </div>
 
   </body>
 </html>

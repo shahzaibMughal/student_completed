@@ -11,16 +11,27 @@ nav{
 .nav-link:hover{
   color: #eee;
 }
-
+/*
 
 /* Table styles */
-table{
+/* table{
   width: 90%;
-  margin: 0 auto;
+  margin: 30px auto;
+}
+thead{
+  background: #fff;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.4);
 }
 td{
-  border: 1px solid black;
+
+
 }
 td,th{
-  padding: 10px;
+  padding: 5px;
 }
+tbody tr{
+  background: #eee;
+}
+tbody tr:nth-child(even){
+  background: #fff;
+} */

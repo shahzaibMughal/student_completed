@@ -32,6 +32,11 @@ $db = mysqli_connect("localhost","root",'','ss');
       .nav-link:hover{
         color: #eee;
       }
+      form{
+        width: 20%;
+        margin: 0 auto;
+      }
+
     </style>
   </head>
   <body>
@@ -39,16 +44,18 @@ $db = mysqli_connect("localhost","root",'','ss');
   <ul class="nav ">
     <li class="nav-item navbar-brand "> Student Management System</li>
     <li  class="nav-item"> <a class="nav-link active" href="user_registration_new.php">Add Record</a></li>
-    <li class="nav-item"> <a class="nav-link"  href=".php">Update Record</a> </li>
-    <li class="nav-item"> <a class="nav-link"  href="delete.php">Delete Record</a> </li>
+    <li class="nav-item"> <a class="nav-link"  href="update_students.php">Update Record</a> </li>
+    <li class="nav-item"> <a class="nav-link"  href="delete_students.php">Delete Record</a> </li>
     <li class="nav-item"> <a class="nav-link"  href="view_students.php">Show Record</a> </li>
     <li class="nav-item"> <a class="nav-link"  href="search.php">Search Record</a> </li>
   </ul>
 </nav>
-<form action='search.php' method='get' class="d-flex jumbotron">
-<div class='search_record' > <h2 class="text-center"> Search A Record </h2>
-<input class="justify-content-center" type='text' name ='search' placeholder="Enter CNIC TO SEARCH" required>
-<input type='submit' class="btn btn-primary" >
+<form action='search.php' method='get' class="">
+  <div class='search_record' > <h2 class="text-center"> Search A Record </h2>
+  <div class="input-group">
+    <input class=" form-control" type='text' name ='search' placeholder="Enter CNIC TO SEARCH" required>
+    <input type='submit' class="btn btn-primary" >
+  </div>
 </form>
 
 <?php

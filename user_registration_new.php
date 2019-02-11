@@ -44,17 +44,25 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <style media="screen">
+    body{
+      background: #eee;
+    }
     nav{
       background: #563d7c;
       color: #fff;
       padding: 10px;
       padding-left: 50px;
+      margin-bottom: 20px;
     }
     .nav-item,.nav-link{
       color: #fff;
     }
     .nav-link:hover{
       color: #eee;
+    }
+    .container h2{
+      font-size: 3em;
+      margin: 5px;
     }
   </style>
 </head>
@@ -63,8 +71,8 @@
     <ul class="nav ">
       <li class="nav-item navbar-brand "> Student Management System</li>
       <li  class="nav-item"> <a class="nav-link active" href="user_registration_new.php">Add Record</a></li>
-      <li class="nav-item"> <a class="nav-link"  href=".php">Update Record</a> </li>
-      <li class="nav-item"> <a class="nav-link"  href="delete.php">Delete Record</a> </li>
+      <li class="nav-item"> <a class="nav-link"  href="update_students.php">Update Record</a> </li>
+      <li class="nav-item"> <a class="nav-link"  href="delete_students.php">Delete Record</a> </li>
       <li class="nav-item"> <a class="nav-link"  href="view_students.php">Show Record</a> </li>
       <li class="nav-item"> <a class="nav-link"  href="search.php">Search Record</a> </li>
     </ul>
@@ -72,8 +80,8 @@
 
 	<div class="container">
 
+    <h2>Add Student</h2>
 		<form method="post" action="<?php echo $_SERVER['SCRIPT_NAME']; ?>" >
-			<h2>Add Student</h2>
 			<div class="singleItem">
 				<label>CNIC:</label>
 				<input class="subItem" type="text" name="cnic" placeholder="e.g. 35202-6370159-9" required>
